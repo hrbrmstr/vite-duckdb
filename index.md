@@ -120,17 +120,25 @@ Now, let's make a "database" from those "tables". We'll also create a table on t
 
 ```js
 const db = await DuckDBClient().of({
+
+  // table from an array we build
   arr: [ { wat: "this is an array" }, { wat: "we will turn" }, { wat: "into a database table!" } ],
+
+  // table from the CSV we read in
   mtcars: mtcars,
+
+  // the JSON has the real data in a sub-field, and we want dates to be dates
   kev: kev.vulnerabilities.map(d => {
     d.dateAdded = new Date(d.dateAdded)
     d.dueDate = new Date(d.dueDate)
     return d
   }),
+
   tags: tags.metadata.map(d => { // DuckDB does not like the JS `cves` "array" field
-    d.cves = d.cves.join(';')         // so we compendate with a bit of wrangling
+    d.cves = d.cves.join(';')    // so we compendate with a bit of wrangling
     return d
   })
+
 })
 ```
 
