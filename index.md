@@ -174,8 +174,8 @@ ddbResToArray(
  await db.sql`
 SELECT 
   name, 
-	wt AS "weight (tons)", 
-	mpg AS "miles per gallon"
+  wt AS "weight (tons)", 
+  mpg AS "miles per gallon"
 FROM 
   mtcars 
 LIMIT 10
