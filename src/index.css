@@ -1,0 +1,221 @@
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-Bold.woff') format('woff');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-Italic.woff') format('woff');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-Medium.woff') format('woff');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Comic Code Ligatures';
+	src: url('/fonts/ComicCodeLigatures-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Comic Code Ligatures', sans-serif;
+}
+
+
+.pill {
+	display: inline-block;
+	line-height: 0.975rem;
+	border-radius: 6px;
+	background-color: #1e7069;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 90%;
+	font-weight: 700;
+}
+
+:root,
+* {
+	--font-size-base: 16px;
+	--font-family-base: 'Rubik', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--font-family-monospace: 'Comic Code Ligatures', 'JetBrains Mono', 'Fira Code', monospace;
+	--font-style-base: normal;
+	--body-1: --font-size-base;
+	--neutral-1: 0, 0, 0;
+	--neutral-2: 255, 255, 255;
+	--accent-1: 60, 100, 240;
+	--accent-1b: 70, 110, 250;
+	--base-0: 255, 255, 255;
+	--base-1: 235, 235, 235;
+	--base-2: 245, 245, 245;
+	--base-3: 255, 255, 255;
+	--base-4: 255, 255, 255;
+	--functional-blue: 20, 120, 220;
+	--functional-red: 220, 40, 40;
+	--functional-yellow: 220, 168, 40;
+	--functional-green: 50, 168, 40;
+	--text-1: rgba(0, 0, 0, .90);
+	--text-2: rgba(0, 0, 0, .60);
+	--text-3: rgba(0, 0, 0, .20);
+	--shadow-1: 0 2px 8px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .05);
+	--spacing-s: 8px;
+	--spacing-xs: calc(var(--spacing-s) / 2);
+	--spacing-m: calc(var(--spacing-s) * 1.5);
+	--spacing-l: calc(var(--spacing-s) * 2);
+	--background-color: white;
+	--foreground-color: #1c1c1e;
+}
+
+html,
+body {
+	background: var(--background-color);
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-base);
+	font-style: var(--font-style-base);
+	line-height: 1.5rem;
+	color: var(--text-1);
+	height: auto !important;
+	padding: 1rem;
+	padding-bottom: 300px !important;
+	/* allows scrolling past content */
+	overflow: auto;
+	margin: 0 auto;
+	max-width: 45rem;
+	/* Adjust this value to set a maximum width */
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+div {
+	padding-bottom: 1.5rem;
+}
+
+h1 {
+	display: inline-block;
+	font-size: calc(var(--font-size-base) * 2);
+	line-height: 2rem;
+	padding-left: 2.4rem;
+	text-indent: -2.4rem;
+}
+
+h2 {
+	font-size: calc(var(--font-size-base) * 1.5);
+	line-height: 1.5rem;
+}
+
+h3 {
+	font-size: var(--font-size-base);
+}
+
+h4 {
+	font-size: calc(var(--font-size-base) * 0.75);
+	line-height: 0.75rem;
+}
+
+.widget {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+
+pre {
+	font-family: var(--font-family-monospace);
+	font-size: calc(var(--font-size-base) * 0.9);
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+	font-size: calc(var(--font-size-base) * 0.9);
+	line-height: 1rem;
+}
+
+pre.shiki {
+	font-family: var(--font-family-monospace);
+	font-size: calc(var(--font-size-base) * 0.9);
+	border: 1px solid gray;
+	overflow-x: auto;
+	overflow-y: scroll;
+	padding: 1.25rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+a {
+	color: rgba(var(--functional-yellow), 1)
+}
+
+/* scrollbar */
+*::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+	visibility: hidden;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: rgba(var(--neutral-1), .05);
+	border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(var(--neutral-1), .10);
+	border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb:active,
+*::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(var(--neutral-1), .20)
+}
+
+@media (prefers-color-scheme: dark) {
+
+	:root,
+	* {
+		--background-color: #1c1c1e;
+		--foreground-color: white;
+		--neutral-1: 255, 255, 255;
+		--neutral-2: 0, 0, 0;
+		--accent-1: 60, 100, 240;
+		--accent-1b: 70, 110, 250;
+		--base-0: 0, 0, 2;
+		--base-1: 15, 15, 15;
+		--base-2: 25, 25, 25;
+		--base-3: 35, 35, 35;
+		--base-4: 45, 45, 45;
+		--functional-blue: 20, 120, 220;
+		--functional-red: 220, 40, 40;
+		--functional-yellow: 220, 160, 40;
+		--functional-green: 40, 160, 40;
+		--text-1: rgba(255, 255, 255, .90);
+		--text-2: rgba(255, 255, 255, .60);
+		--text-3: rgba(255, 255, 255, .20);
+		--shadow-1: 0 2px 8px rgba(255, 255, 255, .2), 0 1px 4px rgba(255, 255, 255, .15);
+	}
+
+	body {
+		background: var(--background-color);
+	}
+}

@@ -1,0 +1,9 @@
+double-display {
+	--results-font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+	--results-color: rgba(var(--functional-green), 1);
+}
+
+:host {
+	--light-plot-background: white;
+  --dark-plot-background:#1c1c1e;
+}
