@@ -131,7 +131,8 @@ const db = await DuckDBClient().of({
     d.cves = d.cves.join(';')         // so we compendate with a bit of wrangling
     return d
   })
-})```
+})
+```
 
 We'll make sure they're in `db`:
 
