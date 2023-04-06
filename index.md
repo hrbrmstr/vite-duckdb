@@ -7,7 +7,7 @@
     "url": "https://rud.is/w/vite-duckdb",
     "description": "Not really a WebR Experiment, but we won't be using databases in WebR so we'll need other ways to get data from them",
     "image": {
-      "url": "https://rud.is/w/vite-duckdb",
+      "url": "https://rud.is/w/vite-duckdb/preview.png",
       "height": "1170",
       "width": "1932",
       "alt": "example"
