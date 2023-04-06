@@ -149,11 +149,11 @@ await db.describeColumns({ table: "kev" })
 
 <data-frame-view label = "'kev' table schema" id="kev-schema"></data-frame-view>
 
-The `ddbResToArray()` function you saw earlier takes the query results from DuckDB — which are Arrow "Proxy" objects — and converts it to a more usable JS array. Let's use it, plus some SQL and JS wrangling to get retrieve bits out of our database to close out this section:
+The `ddbResToArray()` function you saw earlier takes the query results from DuckDB — which are Arrow "Proxy" objects — and converts it to a more usable JS array. Let's use it, plus some SQL and JS wrangling to retrieve bits out of our database to close out this section:
 
 ```js
 ddbResToArray(
-  await db.sql`SELECT wat FROM arr`
+ await db.sql`SELECT wat FROM arr`
 ).map(d => d.wat)
  .join(" ")
 ```
@@ -162,7 +162,7 @@ ddbResToArray(
 
 ```js
 ddbResToArray(
-	await db.sql`
+ await db.sql`
 SELECT 
   name, 
 	wt AS "weight (tons)", 
