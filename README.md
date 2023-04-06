@@ -5,7 +5,7 @@
 Experiment parameters:
 
 - Webr _(just to prove it can coexist)_
-- <li><span class="pill">New!</span> Observable Standard Library's `DuckDBCLient`
+- New! Observable Standard Library's `DuckDBCLient`
 - Lit (web components)
 - Vite (for building)
 
